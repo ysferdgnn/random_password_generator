@@ -11,11 +11,26 @@ Create a new password of desired lenght.
   
 # Usage
   ```
-    options := model.Option{Lenght: 10, IncludeNumbers: true, IncludeSpecials: true, IncludeLowercase: true, IncludeUppercase: true}
+  import (
+	"fmt"
+	"random_password_generator/model"
+	service "random_password_generator/service"
+	)
+  
+	func main() {
 
-	password, _ := service.GeneratePassword(options)
+		options := model.Option{
+				Lenght: 10,
+				IncludeNumbers: true, 
+				IncludeSpecials: true,
+				IncludeLowercase: true,
+				IncludeUppercase: true
+			   }
 
-	fmt.Println(password)
+		password, _ := service.GeneratePassword(options)
 
-  Output : +segW@Qw8e
+		fmt.Println(password)
+	}
+
+ 	 Output : +segW@Qw8e
   ```
